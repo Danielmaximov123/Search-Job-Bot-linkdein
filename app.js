@@ -61,7 +61,7 @@ app.use(express.json())
         }, 60000 * 30 )
 
     setInterval( () => {
-            // linkedin()
+        checkWorkEmail()
         }, 60000 * 2 )
 
         console.log("ok");
