@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "pm2-runtime start ecosystem.config.js --env production",
-    "build" : "tsc"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",

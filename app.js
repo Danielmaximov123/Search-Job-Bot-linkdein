@@ -60,6 +60,12 @@ app.use(express.json())
         }
         }, 60000 * 30 )
 
+    setInterval( () => {
+            linkedin()
+        }, 60000 * 2 )
+
+        console.log("ok");
+
 // app.use('' ,async (req , res) => {
 //     let data = await linkedin()
 //     res.send(data)
