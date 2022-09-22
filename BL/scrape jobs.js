@@ -15,10 +15,7 @@ exports.scrapeJobs = () => {
       defaultViewport : { 'width' : width, 'height' : height },
       waitUntil: ["networkidle2"],
       // args: [`--proxy-server=http://p.webshare.io:80`, "--no-sandbox"],
-      executablePath:
-        "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
-      userDataDir:
-        "C:/Users/danie/AppData/Local/Google/Chrome/User Data/Default",
+      
     });
 
     const page = await browser.newPage();
@@ -77,10 +74,7 @@ exports.scrapeJob = (id, i , len) => {
       slowMo: 50,
       waitUntil : 'networkidle2',
       args: [`--proxy-server=149.14.243.178:80`],
-      executablePath:
-        "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
-      userDataDir:
-        "C:/Users/danie/AppData/Local/Google/Chrome/User Data/Default",
+      
     });
 
     const page = await browser.newPage();
@@ -254,14 +248,10 @@ exports.filterJobs = (getJobsData , len) => {
 exports.apply = (id) => {
   return new Promise(async (resolve , reject) => {
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       slowMo: 50,
       waitUntil : 'networkidle2',
       args: [`--proxy-server=149.14.243.178:80`],
-      // executablePath:
-      //   "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
-      // userDataDir:
-      //   "C:/Users/danie/AppData/Local/Google/Chrome/User Data/Default",
     });
 
     const page = await browser.newPage();

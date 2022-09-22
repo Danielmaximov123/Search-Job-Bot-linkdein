@@ -66,15 +66,4 @@ app.use(express.json())
 
         console.log("ok");
 
-// app.use('' ,async (req , res) => {
-//     let data = await linkedin()
-//     res.send(data)
-// })
-
-
-
-//         app.listen(5000 , () => {
-//             console.log(`The Server is Running in http://localhost:${5000}`);
-//         });
-        
 
