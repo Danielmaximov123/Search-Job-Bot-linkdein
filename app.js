@@ -52,6 +52,7 @@ app.use(express.json())
     let linkedinRunning = false     
 
     setInterval(async () => {
+        console.log('Trying to find a job.');
         if(!linkedinRunning) {
             linkedinRunning = true
             await linkedin()
