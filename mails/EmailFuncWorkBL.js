@@ -19,13 +19,14 @@ exports.checkWorkEmail = () => {
             `
         };
     
-        transporter.transporter.checkWorkEmail(mailOptions, (error, info) => {
+        transporter.transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
                 reject(error)
             } else {
-                resolve(`${data.id} has send to email` , info.messageId , info.response)
+                resolve(`send to email` , info.messageId , info.response)
             }
             });
+
     })
     
 }
