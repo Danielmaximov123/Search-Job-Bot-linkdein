@@ -170,11 +170,13 @@ exports.filterJobs = (getJobsData , len) => {
     let applyJobsExist = await getJobsData?.filter((item) =>
       item.applyExist ? item : !item
     );
-    let title = await applyJobsExist?.filter((item) =>
-      // item?.title?.toLowerCase()?.includes("senior") ? console.log('title') && !item : item
-      {const senior = /senior.*/i;
-      return !senior.test(item.title)
+    let title = await applyJobsExist?.filter((item) => {
+      const senior = /senior.*/i;
+      const ios = /ios.*/i;
+      const android = /android.*/i;
+      return senior.test(item.title) || ios.test(item.title) || android.test(item.title) ? !item : item
     });
+
     let titleNot = await title?.filter((dev) => {
       const developer = /developer.*/i;
       const full = /full.*/i;
