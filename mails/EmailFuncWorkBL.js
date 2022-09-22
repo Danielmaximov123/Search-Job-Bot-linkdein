@@ -1,6 +1,6 @@
 const transporter = require('./smtpMailer')
 
-exports.checkWorkEmail = (data , date) => {
+exports.checkWorkEmail = () => {
     return new Promise((resolve , reject) => {
         let mailOptions = {
             from: '"A bot looking for a job" <No-Reply@splitInvoice.com>', 

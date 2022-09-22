@@ -1,10 +1,11 @@
 const express = require('express')
 const cors = require('cors');
-const { scrapeJobs, scrapeJob, filterJobs, ExampleScrapeWithPagination, apply } = require('./BL/scrape jobs');
+const { scrapeJobs, scrapeJob, filterJobs, apply } = require('./BL/scrape jobs');
 const app = express()
 const sound = require("sound-play");
 const path = require("path");
 const { sendMail } = require('./mails/EmailBL');
+const { checkWorkEmail } = require('./mails/EmailFuncWorkBL');
 const filePath = path.join(__dirname, "/Done Bell (Anime Sound) - Sound Effect for editing.mp3");
 
 app.use(cors())
