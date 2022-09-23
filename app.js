@@ -63,7 +63,7 @@ app.use(express.json())
 
     setInterval( () => {
         checkWorkEmail()
-        }, 3600000 * 3 )
+        }, 3600000 * 6 )
 
         console.log("ok");
 
