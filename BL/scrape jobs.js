@@ -31,8 +31,7 @@ exports.scrapeJobs = () => {
         "AQEIACMHLvuPQANhymUAAAGDVwWcigAAAYN7FJBuTQAAAAAAAAAAADBFAiEAq3IZXy5QjcZSVnldGQCFDMzMbBNYfyFs_9PS29qY5-MCIAZklhfs7nK-X2Nfl5ssA99mxSm5qUcPDSU1OCPGm4GC1RLUZhQAONQnWL06loxHLIiILZU",
       domain: "www.linkedin.com",
     });
-    let url =
-      "https://www.linkedin.com/jobs/search/?currentJobId=3273202253&f_AL=true&f_EA=true&f_TPR=r86400&geoId=101620260&keywords=full%20stack%20developer&location=Israel&refresh=true&sortBy=R";
+    let url = "https://www.linkedin.com/jobs/search/?currentJobId=3281729213&distance=25&f_AL=true&f_TPR=r86400&geoId=101620260&keywords=full%20stack%20developer&sortBy=DD"
     await page.goto(url, { waitUntil: "networkidle2" });
     await page.setUserAgent(
       "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
