@@ -6,7 +6,6 @@ const sound = require("sound-play");
 const path = require("path");
 const { sendMail } = require('./mails/EmailBL');
 const { checkWorkEmail } = require('./mails/EmailFuncWorkBL');
-const filePath = path.join(__dirname, "/Done Bell (Anime Sound) - Sound Effect for editing.mp3");
 
 app.use(cors())
 app.use(express.json())
@@ -38,12 +37,10 @@ app.use(express.json())
                     const element = filterData.data[job];
                     const dateApply = filterData.dateFormat
                     await apply(element.id)
-                    await sendMail(element , dateApply)
+                    return sendMail(element , dateApply)
                 }
-                return sound.play(filePath);
             } else {
                 console.log('There are no suitable jobs');
-                return sound.play(filePath);
             }
         } catch (error) {
             console.log(error);
